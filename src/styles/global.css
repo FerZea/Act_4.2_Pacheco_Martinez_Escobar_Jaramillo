@@ -1,0 +1,255 @@
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  background-color: #f5f7fb;
+  --color-primary: #0052cc;
+  --color-primary-dark: #0a4295;
+  --color-success: #27782d;
+  --color-neutral: #d9d9d9;
+  --color-surface: #ffffff;
+  --color-border: #d9d9d9;
+  --color-shadow: rgba(0, 0, 0, 0.18);
+  --text-title-large: 32px;
+  --text-title-medium: 30px;
+  --text-title-small: 24px;
+  --text-label-large: 18px;
+  --text-body: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: #f5f7fb;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.dashboard-layout {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0 24px;
+}
+
+.page-header__title-group,
+.page-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: var(--text-title-large);
+}
+
+.page-header__user {
+  font-size: var(--text-label-large);
+}
+
+.icon-button,
+.logout-button,
+.group-card__button {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.icon-button {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #111111;
+}
+
+.icon-button--light {
+  color: var(--color-surface);
+}
+
+.logout-button {
+  padding: 10px 18px;
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.group-section {
+  margin-bottom: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
+
+.group-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 12px;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.group-section__header h2 {
+  margin: 0;
+  font-size: var(--text-title-medium);
+}
+
+.group-section__body {
+  padding: 12px;
+}
+
+.group-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.group-section__empty {
+  margin: 0;
+  padding: 16px;
+  border: 1px dashed var(--color-border);
+  border-radius: 8px;
+  font-size: var(--text-body);
+}
+
+.group-card {
+  min-height: 307px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  box-shadow: 0 4px 8px var(--color-shadow);
+}
+
+.group-card__progress {
+  padding: 10px 12px;
+  text-align: right;
+  font-size: var(--text-title-large);
+  font-weight: 700;
+}
+
+.group-card__progress--success {
+  background-color: var(--color-success);
+  color: var(--color-surface);
+}
+
+.group-card__progress--primary {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.group-card__progress--neutral {
+  background-color: var(--color-neutral);
+  color: #000000;
+}
+
+.group-card__content {
+  display: flex;
+  min-height: 243px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.group-card__text h3 {
+  margin: 0 0 12px;
+  font-size: var(--text-title-large);
+}
+
+.group-card__group {
+  margin: 0 0 12px;
+  font-size: var(--text-title-small);
+  font-weight: 700;
+}
+
+.group-card__schedule {
+  margin: 0;
+  font-size: var(--text-body);
+}
+
+.group-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.group-card__button {
+  min-width: 150px;
+  padding: 10px 12px;
+}
+
+.group-card__button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.group-card__button--secondary {
+  background-color: var(--color-neutral);
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .dashboard-layout {
+    padding: 16px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .page-header__actions {
+    justify-content: space-between;
+  }
+
+  .page-header h1,
+  .group-card__text h3 {
+    font-size: 28px;
+  }
+
+  .group-section__header h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-header__title-group,
+  .page-header__actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .group-card__button {
+    width: 100%;
+  }
+}

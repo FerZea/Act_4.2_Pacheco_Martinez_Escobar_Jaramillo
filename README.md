@@ -4,11 +4,14 @@ Proyecto escolar de front-end realizado con React.
 
 ## Descripción
 
-Implementación en React de un diseño creado en Figma para un dashboard de monitoreo de cursos.
+Implementación en React de las pantallas principales de la página `Handoff` del diseño de Figma.
 
-## Objetivo del proyecto
+Pantallas implementadas:
 
-Convertir en React una pantalla diseñada en Figma, manteniendo una estructura simple y clara para una actividad escolar de front-end. El proyecto usa componentes reutilizables, datos de ejemplo y estilos CSS sencillos para facilitar su lectura y explicación en clase.
+- `Inicio de sesión`
+- `Pantalla de inicio`
+- `Registro de clase`
+- `Panel de grupo`
 
 ## Tecnologías usadas
 
@@ -17,46 +20,19 @@ Convertir en React una pantalla diseñada en Figma, manteniendo una estructura s
 - JavaScript
 - CSS
 
-## Requisitos previos
-
-- Node.js 18 o superior
-- npm 9 o superior
-
-## Instalación en Linux y macOS
+## Instalación
 
 ```bash
 npm install
 ```
 
-## Ejecución en Linux y macOS
+## Ejecución
 
 ```bash
 npm run dev
 ```
 
-## Compilación en Linux y macOS
-
-```bash
-npm run build
-```
-
-## Instalación en Windows
-
-1. Instala Node.js desde `https://nodejs.org/`.
-2. Abre `PowerShell` o `Símbolo del sistema` dentro de la carpeta del proyecto.
-3. Ejecuta:
-
-```bash
-npm install
-```
-
-## Ejecución en Windows
-
-```bash
-npm run dev
-```
-
-## Compilación en Windows
+## Compilación
 
 ```bash
 npm run build
@@ -64,23 +40,37 @@ npm run build
 
 ## Estructura del proyecto
 
-- `src/components`: componentes base propuestos para el dashboard.
-- `src/data`: datos de ejemplo usados en la interfaz.
-- `src/pages`: pagina principal usada para integrar la base visual.
-- `src/styles`: estilos globales y variables iniciales.
+- `src/components`: componentes reutilizables basados en los nombres de Figma.
+- `src/data`: datos de ejemplo usados por las pantallas del handoff.
+- `src/pages`: pantallas completas del handoff.
+- `src/styles`: estilos globales en CSS sencillo.
 
 ## Componentes
 
-- `DashboardLayout`: contenedor general de la pantalla.
-- `PageHeader`: encabezado superior con usuario y boton de salida.
-- `GroupSection`: seccion reutilizable para grupos actuales o pasados.
-- `GroupCard`: tarjeta base para mostrar cada grupo.
+- `Header`: encabezado superior.
+- `Boton`: representa el componente `Botón` de Figma.
+- `ContenedorSecundario`: representa `Contenedor-Secundario`.
+- `FormularioInicioSesion`: representa `Formulario-Inicio de sesión`.
+- `FormularioRegistrarClase`: representa `Formulario-Registrar clase`.
+- `CampoDeTexto`: representa `Campo de Texto`.
+- `Input`: representa el selector `Input`.
+- `AreaDeTexto`: representa `Área de Texto`.
+- `TarjetaGrupo`: representa `Tarjeta-grupo`.
+- `BarraProgreso`: representa `Barra progreso`.
+- `GridTarjetas`: representa `Grid tarjetas`.
+- `PanelGrupo`: representa `Panel Grupo`.
+- `GestionOffline`: representa `Gestiòn offline`.
+- `CampoDeArchivo`: representa `Campo de Archivo`.
+- `CalendarioContenedor`: representa `Calendario-Contenedor`.
+- `Calendario`: representa `Calendario`.
+- `ContenedorFiltros`: representa `contenedor-filtros`.
+- `Filtros`: representa `Filtros`.
+- `ContenedorBotonesDia`: representa `Contenedor-Botones-dia`.
+- `GridBotonesDias`: representa `grid-botones dias`.
 
-## Props de los componentes importantes
+## Diseño de referencia
 
-- `PageHeader`: `title`, `userName`, `logoutLabel`
-- `GroupSection`: `title`, `groups`, `emptyMessage`
-- `GroupCard`: `title`, `group`, `schedule`, `progress`, `progressColor`, `actions`
+https://www.figma.com/design/KrCqyMiOunK069xKrZO334/Act_3_2_Zamarron_Leonel__Escobedo_Santiago--Copy-?node-id=31-4&t=C44YByk7mU6s1rkW-1
 
 ## Integrantes
 
